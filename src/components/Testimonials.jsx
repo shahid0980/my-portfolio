@@ -1,23 +1,26 @@
-import React from 'react';
+import React from "react";
 
 const testimonials = [
   {
-    name: 'John Doe',
-    role: 'CEO at TechCorp',
-    content: 'Working with Sagar was an absolute pleasure. His technical expertise and attention to detail resulted in a product that exceeded our expectations.',
-    avatar: '👨‍💼',
+    name: "John Doe",
+    role: "CEO at TechCorp",
+    content:
+      "Working with Sahid was an absolute pleasure. His technical expertise and attention to detail resulted in a product that exceeded our expectations.",
+    avatar: "👨‍💼",
   },
   {
-    name: 'Sarah Johnson',
-    role: 'Product Manager at Startup Inc',
-    content: 'Sagar is a talented developer who consistently delivers high-quality work. His ability to understand requirements and translate them into elegant solutions is impressive.',
-    avatar: '👩‍💼',
+    name: "Sarah Johnson",
+    role: "Product Manager at Startup Inc",
+    content:
+      "Sahid is a talented developer who consistently delivers high-quality work. His ability to understand requirements and translate them into elegant solutions is impressive.",
+    avatar: "👩‍💼",
   },
   {
-    name: 'Mike Chen',
-    role: 'CTO at Innovation Labs',
-    content: 'I highly recommend Sagar for any web development project. He brings creativity, technical skills, and professionalism to every project he works on.',
-    avatar: '👨‍💻',
+    name: "Mike Chen",
+    role: "CTO at Innovation Labs",
+    content:
+      "I highly recommend Sahid for any web development project. He brings creativity, technical skills, and professionalism to every project he works on.",
+    avatar: "👨‍💻",
   },
 ];
 
@@ -45,7 +48,9 @@ const Testimonials = () => {
                   {testimonial.avatar}
                 </div>
                 <div className="ml-4">
-                  <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
+                  <h4 className="font-bold text-gray-900">
+                    {testimonial.name}
+                  </h4>
                   <p className="text-sm text-gray-600">{testimonial.role}</p>
                 </div>
               </div>

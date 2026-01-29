@@ -10,7 +10,7 @@
   .section-padding {
     @apply px-6 py-16 md:px-12 lg:px-24;
   }
-  
+
   .animate-wave {
     animation: wave 2s ease-in-out infinite;
     transform-origin: 70% 70%;
@@ -19,10 +19,12 @@
 }
 
 @keyframes wave {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotate(0deg);
   }
-  10%, 30% {
+  10%,
+  30% {
     transform: rotate(14deg);
   }
   20% {
@@ -36,3 +38,14 @@
   }
 }
 
+@keyframes scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.animate-slide {
+  animation: scroll 15s linear infinite;
+}

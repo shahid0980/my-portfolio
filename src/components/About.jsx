@@ -23,21 +23,22 @@ const About = () => {
               I'm a passionate developer who loves to create
             </h3>
             <p>
-              I'm a full-stack developer with a passion for building beautiful,
-              functional web applications. With several years of experience in
-              the industry, I've worked on a wide range of projects from small
-              business websites to large-scale enterprise applications.
+              I’m a passionate Full Stack Developer with a strong foundation in
+              building scalable, efficient, and user-friendly web applications.
+              I work across both frontend and backend, turning ideas into
+              reliable digital products.
             </p>
             <p>
-              My journey in tech started with curiosity and has evolved into a
-              deep commitment to creating solutions that make a difference. I
-              believe in writing clean, maintainable code and staying up-to-date
-              with the latest technologies.
+              My core skill set includes React.js, Node.js, MongoDB, PostgreSQL,
+              Docker, AWS, and Python. I enjoy designing clean user interfaces,
+              developing secure backend APIs, and deploying applications using
+              modern cloud and container technologies.
             </p>
             <p>
-              When I'm not coding, you can find me exploring new technologies,
-              contributing to open-source projects, or sharing knowledge with
-              the developer community.
+              I hold a Bachelor’s degree in Science, which has strengthened my
+              analytical thinking and problem-solving approach. I’m always eager
+              to learn new technologies, improve my craft, and build solutions
+              that make a real impact.
             </p>
 
             <div className="grid grid-cols-2 gap-4 pt-6">

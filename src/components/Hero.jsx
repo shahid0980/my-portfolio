@@ -1,4 +1,3 @@
-import React from "react";
 import profilePhoto from "../assets/profile.jpg";
 import { Button } from "../subComponents/button";
 import reactIcon from "../assets/react-icon.png";
@@ -7,13 +6,13 @@ import postgreSQLIcon from "../assets/postgresql-icon.png";
 
 const Hero = () => {
   return (
-    <section className="section-padding max-w-7xl mx-auto">
+    <section id="home" className="section-padding max-w-7xl mx-auto">
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div className="space-y-4">
           <div className="space-y-2">
             <p className="text-gray-600 text-lg">👋 Hello, World</p>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900">
-              Hi, I'm Sahid{" "}
+              Hi, I'm Shahid{" "}
               <span className="inline-block animate-wave">👋</span>
             </h1>
           </div>
@@ -79,7 +78,7 @@ const Hero = () => {
                   <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-full blur opacity-30"></div>
                   <img
                     src={profilePhoto}
-                    alt="Sagar"
+                    alt="shahid"
                     className="relative rounded-full w-40 h-40 object-cover border-4 border-white shadow-md"
                   />
                   <div class="absolute inset-0 animate-[spin_10s_linear_infinite]">

@@ -1,4 +1,3 @@
-import React from "react";
 import aboutPhoto from "../assets/about.jpg";
 
 const About = () => {
@@ -13,7 +12,7 @@ const About = () => {
           <div className="relative">
             <img
               src={aboutPhoto}
-              alt="About Sagar"
+              alt="About shahid"
               className="rounded-2xl shadow-xl w-full h-[500px] object-cover"
             />
           </div>
@@ -43,11 +42,11 @@ const About = () => {
 
             <div className="grid grid-cols-2 gap-4 pt-6">
               <div className="bg-white p-4 rounded-lg shadow">
-                <p className="text-3xl font-bold text-primary">50+</p>
+                <p className="text-3xl font-bold text-primary">10+</p>
                 <p className="text-gray-600">Projects Completed</p>
               </div>
               <div className="bg-white p-4 rounded-lg shadow">
-                <p className="text-3xl font-bold text-primary">5+</p>
+                <p className="text-3xl font-bold text-primary">1+</p>
                 <p className="text-gray-600">Years Experience</p>
               </div>
             </div>

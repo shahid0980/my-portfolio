@@ -1,16 +1,61 @@
-# React + Vite
+# 🚀 Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to shahid personal portfolio website!  
+This project showcases my skills, projects, and experience as a **Full Stack Developer & Freelancer**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 👨‍💻 About Me
 
-## React Compiler
+I’m a **Full Stack Developer** with hands-on experience in building modern, scalable web applications.  
+I work as a **freelance developer**, helping clients and startups turn ideas into real-world digital solutions.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+My technical skill set includes:
 
-## Expanding the ESLint configuration
+- **Frontend:** React.js, Tailwind CSS
+- **Backend:** Node.js, Express.js
+- **Databases:** MongoDB, PostgreSQL
+- **DevOps & Cloud:** Docker, AWS
+- **Languages:** JavaScript, Python
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+I hold a **Bachelor’s degree in Science**, which has strengthened my analytical thinking and problem-solving skills.
+
+---
+
+## 🛠️ Tech Stack Used
+
+This portfolio website is built using:
+
+- **React.js** – Component-based frontend library
+- **Tailwind CSS** – Utility-first CSS framework
+- **Vite** – Fast build and development tool
+- **Git & GitHub** – Version control and collaboration
+
+---
+
+## ✨ Features
+
+- Fully responsive design
+- Clean and modern UI
+- Optimized performance
+- Easy to customize
+- Showcases skills, projects, and contact details
+
+---
+
+## 📂 Project Setup
+
+To run this project locally:
+
+```bash
+# Clone the repository
+git clone https://github.com/shahid0980/my-portfolio.git
+
+# Navigate to the project directory
+cd my-portfolio
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev

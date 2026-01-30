@@ -34,7 +34,12 @@ const Hero = () => {
           </div>
 
           <div className="flex gap-4 pt-4">
-            <Button text="Get in Touch" />
+            <div className="md:hidden">
+              <Button text="Download CV" />
+            </div>
+            <div className="hidden md:inline-block">
+              <Button text="Get in Touch" />
+            </div>
             <Button text="View Skills" />
           </div>
 

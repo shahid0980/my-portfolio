@@ -17,13 +17,13 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="section-padding">
+    <section id="skills" className="section-padding bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Skills & <span className="text-primary">Technologies</span>
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Here are some of the technologies and tools I work with regularly
           </p>
         </div>

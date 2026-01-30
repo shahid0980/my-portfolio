@@ -1,26 +1,34 @@
+import { NavButton } from "./buttons";
+
 function LargeNavMenu() {
   return (
-    <>
-      <a to="/home" className="hover:text-blue-500">
+    <div className="hidden md:flex space-x-8 items-center justify-center">
+      <a
+        to="/home"
+        className="text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+      >
         Home
       </a>
-      <a to="/about" className="hover:text-blue-500">
+      <a
+        to="/about"
+        className="text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+      >
         About
       </a>
-      <a to="/skills" className="hover:text-blue-500">
+      <a
+        to="/skills"
+        className="text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+      >
         Skills
       </a>
-      <a to="/contact" className="hover:text-blue-500">
+      <a
+        to="/contact"
+        className="text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+      >
         Contact
       </a>
-      <div className="pl-6 flex items-center justify-center space-x-5">
-        <div className="text-gray-200">|</div>
-        <button className="">{/* <MdOutlineLightMode /> */}</button>
-        <button className="bg-black rounded-xl text-white px-4 py-1 hover:bg-gray-800 active:translate-y-0.5">
-          Download CV
-        </button>
-      </div>
-    </>
+      <NavButton />
+    </div>
   );
 }
 

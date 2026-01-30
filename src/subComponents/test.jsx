@@ -10,7 +10,7 @@ function NavBar() {
     setIsMenuOpen(isMenuOpen === "hidden" ? "block" : "hidden");
   }
   return (
-    <nav className="bg-white font-semibold dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 transition-colors duration-300">
+    <nav className="bg-white w-full py-2 flex items-center justify-center shadow-md dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <div className="flex-shrink-0 flex items-center">
@@ -18,8 +18,12 @@ function NavBar() {
               Shahid Khan
             </h1>
           </div>
-
-          <LargeNavMenu />
+          {/* <div>
+            <ThemeToggle />
+          </div> */}
+          <div className="hidden md:flex space-x-8">
+            <LargeNavMenu />
+          </div>
 
           <div className="md:hidden flex items-center">
             <button

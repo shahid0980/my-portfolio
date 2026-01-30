@@ -1,6 +1,5 @@
-import React from "react";
 import projectImg from "../assets/project1.png";
-import { SmButton } from "../subComponents/smButton";
+import { SmButton } from "../subComponents/buttons";
 
 const projects = [
   {

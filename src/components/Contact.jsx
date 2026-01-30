@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "../subComponents/button";
+import { Button } from "../subComponents/buttons";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -23,13 +23,13 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="bg-gray-50 section-padding">
+    <section id="contact" className="bg-gray-50 dark:bg-gray-800 section-padding transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Get In <span className="text-primary">Touch</span>
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Have a project in mind? Let's work together to create something
             amazing
           </p>
@@ -37,9 +37,9 @@ const Contact = () => {
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <div className="bg-white p-6 rounded-xl shadow-lg">
+            <div className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg transition-colors duration-300">
               <div className="flex items-center space-x-4">
-                <div className="bg-primary/10 p-4 rounded-lg">
+                <div className="bg-primary/10 dark:bg-primary/20 p-4 rounded-lg">
                   <svg
                     className="w-6 h-6 text-primary"
                     fill="none"
@@ -55,15 +55,15 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">Email</h3>
-                  <p className="text-gray-600">khans0980gmail.com</p>
+                  <h3 className="font-semibold text-gray-900 dark:text-white">Email</h3>
+                  <p className="text-gray-600 dark:text-gray-300">khans0980gmail.com</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-lg">
+            <div className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg transition-colors duration-300">
               <div className="flex items-center space-x-4">
-                <div className="bg-primary/10 p-4 rounded-lg">
+                <div className="bg-primary/10 dark:bg-primary/20 p-4 rounded-lg">
                   <svg
                     className="w-6 h-6 text-primary"
                     fill="none"
@@ -85,15 +85,15 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">Location</h3>
-                  <p className="text-gray-600">Mumbai, India</p>
+                  <h3 className="font-semibold text-gray-900 dark:text-white">Location</h3>
+                  <p className="text-gray-600 dark:text-gray-300">Mumbai, India</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-xl shadow-lg">
+            <div className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg transition-colors duration-300">
               <div className="flex items-center space-x-4">
-                <div className="bg-primary/10 p-4 rounded-lg">
+                <div className="bg-primary/10 dark:bg-primary/20 p-4 rounded-lg">
                   <svg
                     className="w-6 h-6 text-primary"
                     fill="none"
@@ -109,8 +109,8 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">Phone</h3>
-                  <p className="text-gray-600">+91 9337633755</p>
+                  <h3 className="font-semibold text-gray-900 dark:text-white">Phone</h3>
+                  <p className="text-gray-600 dark:text-gray-300">+91 9337633755</p>
                 </div>
               </div>
             </div>
@@ -118,12 +118,12 @@ const Contact = () => {
 
           <form
             onSubmit={handleSubmit}
-            className="bg-white p-8 rounded-xl shadow-lg space-y-6 flex flex-col"
+            className="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg space-y-6 flex flex-col transition-colors duration-300"
           >
             <div>
               <label
                 htmlFor="name"
-                className="block text-sm font-medium text-gray-700 mb-2"
+                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
               >
                 Your Name
               </label>
@@ -134,7 +134,7 @@ const Contact = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
+                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-600 dark:text-white rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
                 placeholder="John Doe"
               />
             </div>
@@ -142,7 +142,7 @@ const Contact = () => {
             <div>
               <label
                 htmlFor="email"
-                className="block text-sm font-medium text-gray-700 mb-2"
+                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
               >
                 Your Email
               </label>
@@ -153,7 +153,7 @@ const Contact = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
+                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-600 dark:text-white rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition"
                 placeholder="john@example.com"
               />
             </div>
@@ -161,7 +161,7 @@ const Contact = () => {
             <div>
               <label
                 htmlFor="message"
-                className="block text-sm font-medium text-gray-700 mb-2"
+                className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
               >
                 Your Message
               </label>
@@ -172,7 +172,7 @@ const Contact = () => {
                 onChange={handleChange}
                 required
                 rows="5"
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition resize-none"
+                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-600 dark:text-white rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition resize-none"
                 placeholder="Tell me about your project..."
               ></textarea>
             </div>
@@ -182,27 +182,27 @@ const Contact = () => {
         </div>
       </div>
 
-      <footer className="mt-16 pt-8 border-t border-gray-200 text-center">
-        <p className="text-gray-600">
+      <footer className="mt-16 pt-8 border-t border-gray-200 dark:border-gray-700 text-center transition-colors duration-300">
+        <p className="text-gray-600 dark:text-gray-400">
           © 2026 Sahid. All rights reserved. Built with ❤️ using React &
           Tailwind CSS
         </p>
         <div className="flex justify-center gap-6 mt-4">
           <a
             href="#"
-            className="text-gray-600 hover:text-primary transition-colors"
+            className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
           >
             GitHub
           </a>
           <a
             href="#"
-            className="text-gray-600 hover:text-primary transition-colors"
+            className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
           >
             LinkedIn
           </a>
           <a
             href="#"
-            className="text-gray-600 hover:text-primary transition-colors"
+            className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
           >
             Twitter
           </a>

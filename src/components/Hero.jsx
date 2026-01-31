@@ -10,7 +10,9 @@ const Hero = () => {
       <div className="grid md:grid-cols-2 gap-12 items-center">
         <div className="space-y-4">
           <div className="space-y-2">
-            <p className="text-gray-600 dark:text-gray-400 text-lg">👋 Hello, World</p>
+            <p className="text-gray-600 dark:text-gray-400 text-lg">
+              👋 Hello, World
+            </p>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white">
               Hi, I'm Shahid{" "}
               <span className="inline-block animate-wave">👋</span>
@@ -44,7 +46,7 @@ const Hero = () => {
 
           <div className="flex gap-4 pt-4">
             <a
-              href="#"
+              href="https://github.com/shahid0980"
               className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -52,7 +54,7 @@ const Hero = () => {
               </svg>
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/shahid-khan-073157157/"
               className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
             >
               <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -83,20 +85,20 @@ const Hero = () => {
                   />
                   <div class="absolute inset-0 animate-[spin_10s_linear_infinite]">
                     <div class="absolute top-0 left-1/2 flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 animate-[spin_8s_linear_infinite_reverse] items-center justify-center rounded-xl ">
-                      <img src={reactIcon} alt="Logo" class="h-10 w-10" />
+                      <img src={reactIcon} alt="Logo" className="h-10 w-10" />
                     </div>
                   </div>
                 </div>
-                <div class="absolute inset-0 animate-[spin_15s_linear_infinite]">
-                  <div class="absolute top-0 left-1/2 flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 animate-[spin_8s_linear_infinite_reverse] items-center justify-center rounded-xl  ">
-                    <img src={nodeJsIcon} alt="Logo" class="h-10 w-10" />
+                <div className="absolute inset-0 animate-[spin_15s_linear_infinite]">
+                  <div className="absolute top-0 left-1/2 flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 animate-[spin_8s_linear_infinite_reverse] items-center justify-center rounded-xl  ">
+                    <img src={nodeJsIcon} alt="Logo" className="h-10 w-10" />
                   </div>
                 </div>
               </div>
             </div>
-            <div class="absolute inset-0 animate-[spin_20s_linear_infinite]">
-              <div class="absolute top-0 left-1/2 flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 animate-[spin_8s_linear_infinite_reverse] items-center justify-center rounded-xl  bg-white shadow-md">
-                <img src={postgreSQLIcon} alt="Logo" class="h-10 w-10" />
+            <div className="absolute inset-0 animate-[spin_20s_linear_infinite]">
+              <div className="absolute top-0 left-1/2 flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 animate-[spin_8s_linear_infinite_reverse] items-center justify-center rounded-xl  bg-white shadow-md">
+                <img src={postgreSQLIcon} alt="Logo" className="h-10 w-10" />
               </div>
             </div>
           </div>

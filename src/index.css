@@ -1,5 +1,29 @@
 @import "tailwindcss";
 
+/* :root {
+  --primary-dark-bg-color: #1f2937;
+  --primary-dark-text-color: #e5e7eb;
+  --primary-light-bg-color: #f3f4f6;
+  --primary-light-text-color: #111827;
+  --secondary-dark-bg-color: #374151;
+  --secondary-light-bg-color: #dddddd;
+} */
+
+/* .dark {
+  --primary-dark-bg-color: rgb(15 23 42);
+}
+.light {
+  --primary-light-bg-color: rgb(255 255 255);
+} */
+
+/* .light {
+  --primary-bg-color: var(--primary-light-bg-color);
+  --primary-text-color: var(--primary-light-text-color);
+  --secondary-bg-color: var(--secondary-light-bg-color);
+} */
+
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer base {
   body {
     @apply m-0 min-h-screen bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300;

@@ -1,4 +1,4 @@
-export function Banner() {
+function Banner() {
   return (
     <div className="w-full h-7 bg-slate-900 dark:bg-slate-800 text-white flex items-center overflow-hidden relative transition-colors duration-300">
       <div className="whitespace-nowrap animate-slide flex items-center gap-8">
@@ -17,3 +17,5 @@ export function Banner() {
     </div>
   );
 }
+
+export default Banner;

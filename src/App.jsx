@@ -5,7 +5,7 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
-import { Banner } from "./subComponents/banner";
+import Banner from "./subComponents/banner";
 
 function App() {
   return (

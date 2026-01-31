@@ -23,7 +23,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="bg-gray-50 dark:bg-gray-800 section-padding transition-colors duration-300">
+    <section
+      id="contact"
+      className="bg-gray-50 dark:bg-gray-800 section-padding transition-colors duration-300"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -55,8 +58,12 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 dark:text-white">Email</h3>
-                  <p className="text-gray-600 dark:text-gray-300">khans0980gmail.com</p>
+                  <h3 className="font-semibold text-gray-900 dark:text-white">
+                    Email
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    khans0980gmail.com
+                  </p>
                 </div>
               </div>
             </div>
@@ -85,8 +92,12 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 dark:text-white">Location</h3>
-                  <p className="text-gray-600 dark:text-gray-300">Mumbai, India</p>
+                  <h3 className="font-semibold text-gray-900 dark:text-white">
+                    Location
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    Mumbai, India
+                  </p>
                 </div>
               </div>
             </div>
@@ -109,8 +120,12 @@ const Contact = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 dark:text-white">Phone</h3>
-                  <p className="text-gray-600 dark:text-gray-300">+91 9337633755</p>
+                  <h3 className="font-semibold text-gray-900 dark:text-white">
+                    Phone
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    +91 9337633755
+                  </p>
                 </div>
               </div>
             </div>
@@ -184,7 +199,7 @@ const Contact = () => {
 
       <footer className="mt-16 pt-8 border-t border-gray-200 dark:border-gray-700 text-center transition-colors duration-300">
         <p className="text-gray-600 dark:text-gray-400">
-          © 2026 Sahid. All rights reserved. Built with ❤️ using React &
+          © 2026 Shahid. All rights reserved. Built with ❤️ using React &
           Tailwind CSS
         </p>
         <div className="flex justify-center gap-6 mt-4">

@@ -12,7 +12,7 @@ function NavBar() {
   return (
     <nav className="bg-white font-semibold dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
+        <div className="flex justify-between py-2 items-center">
           <div className="flex-shrink-0 flex items-center">
             <h1 className="text-xl font-bold text-gray-800 dark:text-white">
               Shahid Khan
@@ -24,7 +24,7 @@ function NavBar() {
           <div className="md:hidden flex items-center">
             <button
               onClick={handleClick}
-              className="text-gray-700 dark:text-gray-300 outline-none p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+              className="text-gray-700 dark:text-gray-300 outline-none px-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
             >
               <svg
                 id="menu-icon"

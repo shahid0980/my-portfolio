@@ -1,4 +1,6 @@
 import { useDarkMode } from "../hooks/themes";
+import { MdDarkMode } from "react-icons/md";
+import { CiLight } from "react-icons/ci";
 
 export function Button(props) {
   return (
@@ -31,15 +33,25 @@ export function SmButton(props) {
 
 export function NavButton() {
   let { theme, toggleTheme } = useDarkMode();
+
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "shahidkhan_CV.pdf";
+    link.download = "shahidkhan_CV.pdf";
+    link.click();
+  };
   return (
     <div className=" md:flex items-center justify-center space-x-5">
       <button
         onClick={toggleTheme}
-        className="bg-black dark:bg-gray-700 rounded-xl text-white px-4 py-1 hover:bg-gray-800 dark:hover:bg-gray-600 active:translate-y-0.5"
+        className=" rounded-xl px-4 py-1active:translate-y-0.5 text-white"
       >
-        {theme === "dark" ? "☀️ Light" : "🌙 Dark"}
+        {theme === "dark" ? <MdDarkMode /> : <CiLight className="text-black" />}
       </button>
-      <button className="hidden md:inline-block bg-black dark:bg-gray-700 rounded-xl text-white px-4 py-1 hover:bg-gray-800 dark:hover:bg-gray-600 active:translate-y-0.5">
+      <button
+        onClick={handleDownload}
+        className="hidden md:inline-block bg-black dark:bg-gray-700 rounded-xl  px-4 py-1 hover:bg-gray-800 dark:hover:bg-gray-600 active:translate-y-0.5 text-white"
+      >
         Download CV
       </button>
     </div>

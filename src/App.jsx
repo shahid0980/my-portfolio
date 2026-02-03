@@ -1,25 +1,11 @@
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Projects from "./components/Projects";
-import Testimonials from "./components/Testimonials";
-import Contact from "./components/Contact";
-import Banner from "./subComponents/banner";
+import Header from "./components/Header.jsx";
+import { Outlet } from "react-router";
 
 function App() {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300 ">
       <Header />
-      <Banner />
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        {/* <Projects /> */}
-        {/* <Testimonials /> */}
-        <Contact />
-      </main>
+      <Outlet />
     </div>
   );
 }

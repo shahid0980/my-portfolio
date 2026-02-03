@@ -1,4 +1,9 @@
-export function NavLinks(props) {
+interface NavLinksProps {
+  href: string;
+  pageName: string;
+}
+
+export function NavLinks(props: NavLinksProps) {
   return (
     <a
       href={props.href}

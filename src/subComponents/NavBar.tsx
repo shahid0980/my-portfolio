@@ -1,7 +1,7 @@
 import { useState } from "react";
 import LargeNavMenu from "./largeNavMenu";
 import { MobileMenu } from "./MobileMenu";
-import ThemeToggle from "./ThemesToggle";
+// import ThemeToggle from "./ThemesToggle";
 
 function NavBar() {
   const [isMenuOpen, setIsMenuOpen] = useState("hidden");
@@ -10,25 +10,20 @@ function NavBar() {
     setIsMenuOpen(isMenuOpen === "hidden" ? "block" : "hidden");
   }
   return (
-    <nav className="bg-white w-full py-2 flex items-center justify-center shadow-md dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 transition-colors duration-300">
+    <nav className="bg-white dark:bg-red-900 font-semibold border-b border-gray-200 dark:border-gray-700 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
+        <div className="flex justify-between items-center py-2">
+          {/* bg-linear-to-r from-blue-100 to-blue-400 text-transparent bg-clip-text */}
           <div className="flex-shrink-0 flex items-center">
-            <h1 className="text-xl font-bold text-gray-800 dark:text-white">
-              Shahid Khan
-            </h1>
-          </div>
-          {/* <div>
-            <ThemeToggle />
-          </div> */}
-          <div className="hidden md:flex space-x-8">
-            <LargeNavMenu />
+            <h1 className="text-xl font-bold  ">Shahid Khan</h1>
           </div>
 
-          <div className="md:hidden flex items-center">
+          <LargeNavMenu />
+
+          <div className="md:hidden flex items-center ">
             <button
               onClick={handleClick}
-              className="text-gray-700 dark:text-gray-300 outline-none p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
+              className="text-gray-700 dark:text-gray-300 outline-none px-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
             >
               <svg
                 id="menu-icon"
@@ -38,9 +33,9 @@ function NavBar() {
                 viewBox="0 0 24 24"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
                   d="M4 6h16M4 12h16M4 18h16"
                 ></path>
               </svg>

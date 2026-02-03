@@ -5,6 +5,12 @@ import { Button } from "../subComponents/buttons";
 import ShahidSystem from "../subComponents/ShahidSystem";
 
 const Hero = () => {
+  function handleDownload() {
+    const link = document.createElement("a");
+    link.href = "shahidkhan_CV.pdf";
+    link.download = "shahid-resume.pdf";
+    link.click();
+  }
   return (
     <section id="home" className="section-padding max-w-7xl mx-auto">
       <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -37,7 +43,11 @@ const Hero = () => {
 
           <div className="flex gap-4 pt-4">
             <div className="md:hidden">
-              <Button text="Download CV" />
+              <Button
+                className="text-bold"
+                onClick={handleDownload}
+                text="Download CV"
+              />
             </div>
             <div className="hidden md:inline-block">
               <Button text="Get in Touch" />

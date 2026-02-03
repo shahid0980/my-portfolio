@@ -1,8 +1,22 @@
-import React, { useMemo } from "react";
+import { useMemo } from "react";
 
-const AsteroidBackground = ({ count = 50 }) => {
+interface Asteroid {
+  id: number;
+  size: string;
+  color: string;
+  top: string;
+  left: string;
+  duration: string;
+  delay: string;
+}
+
+interface AsteroidBackgroundProps {
+  count?: number;
+}
+
+const AsteroidBackground = ({ count = 50 }: AsteroidBackgroundProps) => {
   // Generate asteroid data once on component mount
-  const asteroids = useMemo(() => {
+  const asteroids: Asteroid[] = useMemo(() => {
     const colors = [
       "bg-gray-400",
       "bg-gray-500",

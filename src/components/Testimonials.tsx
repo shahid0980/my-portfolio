@@ -1,6 +1,11 @@
-import React from "react";
+interface Testimonial {
+  name: string;
+  role: string;
+  content: string;
+  avatar: string;
+}
 
-const testimonials = [
+const testimonials: Testimonial[] = [
   {
     name: "John Doe",
     role: "CEO at TechCorp",

@@ -1,7 +1,16 @@
 import projectImg from "../assets/project1.png";
-import { SmButton } from "../subComponents/buttons";
+import { Button } from "../subComponents/buttons";
 
-const projects = [
+interface Project {
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+  liveUrl: string;
+  codeUrl: string;
+}
+
+const projects: Project[] = [
   {
     title: "E-Commerce Platform",
     description:
@@ -79,9 +88,9 @@ const Projects = () => {
                 </div>
 
                 <div className="flex gap-4 pt-2">
-                  <SmButton text="Live Demo" />
+                  <Button text="Live Demo" />
 
-                  <SmButton text="View Code" />
+                  <Button text="View Code" />
                 </div>
               </div>
             </div>

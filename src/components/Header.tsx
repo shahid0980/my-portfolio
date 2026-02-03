@@ -1,4 +1,5 @@
-import NavBar from "../subComponents/NavBar.jsx";
+import NavBar from "../subComponents/NavBar.tsx";
+
 const Header = () => {
   return (
     <header className=" sticky top-0 z-50">

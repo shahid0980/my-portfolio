@@ -1,21 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, ChangeEvent, FormEvent } from "react";
 import { Button } from "../subComponents/buttons";
 
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
+}
+
 const Contact = () => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     message: "",
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     // Handle form submission
     console.log("Form submitted:", formData);
     alert("Thanks for reaching out! I'll get back to you soon.");
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -25,7 +31,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="bg-gray-50 dark:bg-gray-800 section-padding transition-colors duration-300"
+      className="bg-gray-200/20 section-padding transition-colors duration-300"
     >
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
@@ -186,7 +192,7 @@ const Contact = () => {
                 value={formData.message}
                 onChange={handleChange}
                 required
-                rows="5"
+                rows={5}
                 className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-600 dark:text-white rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition resize-none"
                 placeholder="Tell me about your project..."
               ></textarea>

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 export function useDarkMode() {
   // Initialize state based on localStorage or system preference
-  const [theme, setTheme] = useState(
+  const [theme, setTheme] = useState<string>(
     localStorage.theme === "dark" ||
       window.matchMedia("(prefers-color-scheme: dark)").matches
       ? "dark"
@@ -28,5 +28,3 @@ export function useDarkMode() {
 
   return { theme, toggleTheme };
 }
-
-//

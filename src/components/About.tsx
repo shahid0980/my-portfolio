@@ -2,7 +2,10 @@ import aboutPhoto from "../assets/about.jpg";
 
 const About = () => {
   return (
-    <section id="about" className="bg-gray-50 dark:bg-gray-800 section-padding transition-colors duration-300">
+    <section
+      id="about"
+      className="bg-gray-200/20 section-padding transition-colors duration-300"
+    >
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
           About <span className="text-primary">Me</span>
@@ -17,7 +20,7 @@ const About = () => {
             />
           </div>
 
-          <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
+          <div className="space-y-4 text-gray-900 dark:text-gray-400 leading-relaxed">
             <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
               I'm a passionate developer who loves to create
             </h3>
@@ -43,11 +46,15 @@ const About = () => {
             <div className="grid grid-cols-2 gap-4 pt-6">
               <div className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow transition-colors duration-300">
                 <p className="text-3xl font-bold text-primary">10+</p>
-                <p className="text-gray-600 dark:text-gray-300">Projects Completed</p>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Projects Completed
+                </p>
               </div>
               <div className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow transition-colors duration-300">
                 <p className="text-3xl font-bold text-primary">1+</p>
-                <p className="text-gray-600 dark:text-gray-300">Years Experience</p>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Years Experience
+                </p>
               </div>
             </div>
           </div>

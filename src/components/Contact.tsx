@@ -45,8 +45,8 @@ const Contact = () => {
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <div className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg transition-colors duration-300">
+          <div className="space-y-6 ">
+            <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg transition-colors duration-300">
               <div className="flex items-center space-x-4">
                 <div className="bg-primary/10 dark:bg-primary/20 p-4 rounded-lg">
                   <svg
@@ -74,7 +74,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg transition-colors duration-300">
+            <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg transition-colors duration-300">
               <div className="flex items-center space-x-4">
                 <div className="bg-primary/10 dark:bg-primary/20 p-4 rounded-lg">
                   <svg
@@ -108,7 +108,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg transition-colors duration-300">
+            <div className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg transition-colors duration-300">
               <div className="flex items-center space-x-4">
                 <div className="bg-primary/10 dark:bg-primary/20 p-4 rounded-lg">
                   <svg
@@ -139,7 +139,7 @@ const Contact = () => {
 
           <form
             onSubmit={handleSubmit}
-            className="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg space-y-6 flex flex-col transition-colors duration-300"
+            className="hidden md:flex bg-white dark:bg-gray-900 p-8 rounded-xl shadow-lg space-y-6 flex-col transition-colors duration-300"
           >
             <div>
               <label

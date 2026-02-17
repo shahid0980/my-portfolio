@@ -1,7 +1,7 @@
 import { useDarkMode } from "../hooks/themes";
 import { MdDarkMode } from "react-icons/md";
 import { CiLight } from "react-icons/ci";
-import React from "react";
+
 
 interface ButtonProps {
   text: string;
@@ -31,14 +31,15 @@ export function NavButton() {
   }
 
   return (
-    <div className="hidden md:flex items-center justify-center space-x-5">
+    <div className=" flex items-center justify-center space-x-5">
       <button
+
         onClick={toggleTheme}
-        className=" rounded-xl active:translate-y-0.5 text-white text-xl"
+        className=" rounded-xl active:translate-y-0.5 text-white text-xl flex items-center justify-center"
       >
         {theme === "dark" ? <MdDarkMode /> : <CiLight className="text-black" />}
       </button>
-      <Button text="Download CV" onClick={handleDownload} />
+      <Button text="Download CV" onClick={handleDownload} className="hidden md:inline-block" />
     </div>
   );
 }

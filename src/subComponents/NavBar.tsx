@@ -10,7 +10,7 @@ function NavBar() {
     setIsMenuOpen(isMenuOpen === "hidden" ? "block" : "hidden");
   }
   return (
-    <nav className="bg-white dark:bg-red-900 font-semibold border-b border-gray-200 dark:border-gray-700 transition-colors duration-300">
+    <nav className="bg-white dark:bg-gray-950 w-full  font-semibold  transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-2">
           {/* bg-linear-to-r from-blue-100 to-blue-400 text-transparent bg-clip-text */}

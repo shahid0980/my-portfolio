@@ -44,13 +44,13 @@ const About = () => {
             </p>
 
             <div className="grid grid-cols-2 gap-4 pt-6">
-              <div className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow transition-colors duration-300">
+              <div className="bg-white dark:bg-gray-900 p-4 rounded-lg shadow transition-colors duration-300">
                 <p className="text-3xl font-bold text-primary">10+</p>
                 <p className="text-gray-600 dark:text-gray-300">
                   Projects Completed
                 </p>
               </div>
-              <div className="bg-white dark:bg-gray-700 p-4 rounded-lg shadow transition-colors duration-300">
+              <div className="bg-white dark:bg-gray-900 p-4 rounded-lg shadow transition-colors duration-300">
                 <p className="text-3xl font-bold text-primary">1+</p>
                 <p className="text-gray-600 dark:text-gray-300">
                   Years Experience

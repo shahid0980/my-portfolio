@@ -102,7 +102,7 @@ const Contact = () => {
                     Location
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Mumbai, India
+                    Odisha, India
                   </p>
                 </div>
               </div>

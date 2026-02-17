@@ -30,11 +30,11 @@ export const codeSnippet = `
         self._backendDevelopment = value
 
 # Example Usage:
-developer = shahid("React", "node.js with express")
+developer = shahid("React", "Node.js with Express")
 
 # Accessing properties (calls the getter)
 print(developer.webDevelopment)    # Output: React
-print(developer.backendDevelopment) # Output: Django
+print(developer.backendDevelopment) # Output: Node.js with Express
 
 # Updating properties (calls the setter)
 developer.backendDevelopment = "FastAPI" 

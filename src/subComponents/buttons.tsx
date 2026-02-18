@@ -39,7 +39,7 @@ export function NavButton() {
       >
         {theme === "dark" ? <MdDarkMode /> : <CiLight className="text-black" />}
       </button>
-      <Button text="Download CV" onClick={handleDownload} className="hidden md:inline-block" />
+      <Button text="Download CV" onClick={handleDownload} />
     </div>
   );
 }

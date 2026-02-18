@@ -18,20 +18,21 @@ function ShahidSystem() {
               />
               <div className="absolute inset-0 animate-[spin_10s_linear_infinite]">
                 <div className="absolute top-0 left-1/2 flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 animate-[spin_8s_linear_infinite_reverse] items-center justify-center rounded-xl ">
-                  <img src={reactIcon} alt="Logo" className="h-10 w-10" />
+                  <img src="https://res.cloudinary.com/dhcvk2b2u/image/upload/v1771437528/portfolio-website-images/icons8-node-js-96_viihlj.png" alt="Logo" className="h-10 w-10" />
                 </div>
               </div>
             </div>
             <div className="absolute inset-0 animate-[spin_15s_linear_infinite]">
               <div className="absolute top-0 left-1/2 flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 animate-[spin_8s_linear_infinite_reverse] items-center justify-center rounded-xl  ">
-                <img src={nodeJsIcon} alt="Logo" className="h-10 w-10" />
+
+                <img src="https://res.cloudinary.com/dhcvk2b2u/image/upload/v1771437531/portfolio-website-images/react-icon_srkpcf.png" alt="Logo" className="h-10 w-10" />
               </div>
             </div>
           </div>
         </div>
         <div className="absolute inset-0 animate-[spin_20s_linear_infinite]">
           <div className="absolute top-0 left-1/2 flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 animate-[spin_8s_linear_infinite_reverse] items-center justify-center rounded-xl  bg-white shadow-md">
-            <img src={postgreSQLIcon} alt="Logo" className="h-10 w-10" />
+            <img src="https://res.cloudinary.com/dhcvk2b2u/image/upload/v1771437530/portfolio-website-images/postgresql-icon_xd04ez.png" alt="Logo" className="h-10 w-10" />
           </div>
         </div>
       </div>

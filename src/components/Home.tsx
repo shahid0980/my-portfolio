@@ -3,8 +3,7 @@ import Hero from "./Hero";
 import About from "./About";
 import Skills from "./Skills";
 import Contact from "./Contact";
-// import Projects from "./Projects";
-// import Testimonials from "./Testimonials";
+
 
 function Home() {
   return (
@@ -14,8 +13,6 @@ function Home() {
         <Hero />
         <About />
         <Skills />
-        {/* <Projects /> */}
-        {/* <Testimonials /> */}
         <Contact />
       </main>
     </>

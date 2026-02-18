@@ -1,5 +1,3 @@
-import aboutPhoto from "../assets/about.jpg";
-
 const About = () => {
   return (
     <section
@@ -14,7 +12,7 @@ const About = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative">
             <img
-              src={aboutPhoto}
+              src="https://res.cloudinary.com/dhcvk2b2u/image/upload/v1771437017/portfolio-website-images/about_pcwij3.jpg"
               alt="About shahid"
               className="rounded-2xl shadow-xl w-full h-[500px] object-cover"
             />

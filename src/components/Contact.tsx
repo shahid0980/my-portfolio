@@ -203,31 +203,11 @@ const Contact = () => {
         </div>
       </div>
 
-      <footer className="mt-16 pt-8 border-t border-gray-200 dark:border-gray-700 text-center transition-colors duration-300">
+      <footer className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700 text-center transition-colors duration-300">
         <p className="text-gray-600 dark:text-gray-400">
-          © 2026 Shahid. All rights reserved. Built with ❤️ using React &
+          © 2026 Shahid. All rights reserved. Built with using React &
           Tailwind CSS
         </p>
-        <div className="flex justify-center gap-6 mt-4">
-          <a
-            href="#"
-            className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
-          >
-            GitHub
-          </a>
-          <a
-            href="#"
-            className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
-          >
-            LinkedIn
-          </a>
-          <a
-            href="#"
-            className="text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-primary transition-colors"
-          >
-            Twitter
-          </a>
-        </div>
       </footer>
     </section>
   );

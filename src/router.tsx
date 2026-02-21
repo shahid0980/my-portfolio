@@ -4,7 +4,7 @@ import Home from "./components/Home.tsx";
 
 const router = createBrowserRouter([
   {
-    path: "/my-portfolio/",
+    path: "/",
     Component: App,
     children: [
       {

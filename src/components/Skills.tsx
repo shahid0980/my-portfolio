@@ -76,7 +76,7 @@ const Skills = () => {
                   </motion.p>
                   <button
                     onClick={() => setActive(null)}
-                    className="mt-8 px-6 py-2 bg-primary text-white rounded-full text-sm font-medium"
+                    className="text-black dark:text-white mt-8 px-6 py-2 bg-primary text-white rounded-full text-sm font-medium"
                   >
                     Close
                   </button>

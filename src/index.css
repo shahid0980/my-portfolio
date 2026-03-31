@@ -1,93 +1,102 @@
 @import "tailwindcss";
 
-/* :root {
-  --primary-dark-bg-color: #1f2937;
-  --primary-dark-text-color: #e5e7eb;
-  --primary-light-bg-color: #f3f4f6;
-  --primary-light-text-color: #111827;
-  --secondary-dark-bg-color: #374151;
-  --secondary-light-bg-color: #dddddd;
-} */
-
-/* .dark {
-  --primary-dark-bg-color: rgb(15 23 42);
-}
-.light {
-  --primary-light-bg-color: rgb(255 255 255);
-} */
-
-/* .light {
-  --primary-bg-color: var(--primary-light-bg-color);
-  --primary-text-color: var(--primary-light-text-color);
-  --secondary-bg-color: var(--secondary-light-bg-color);
-} */
-
 @custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #8B5CF6;
+  --color-primary-light: #A78BFA;
+  --color-accent: #6366F1;
+  --color-accent-light: #818CF8;
+
+  --font-family-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 @layer base {
   body {
-    @apply m-0 min-h-screen bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300;
+    @apply bg-white text-slate-700 dark:bg-slate-950 dark:text-slate-300 antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
 }
 
-@layer utilities {
-  .section-padding {
-    @apply px-6 py-16 md:px-12 lg:px-24;
-  }
-
-  .animate-wave {
-    animation: wave 2s ease-in-out infinite;
-    transform-origin: 70% 70%;
-    display: inline-block;
-  }
+/* Gradient text */
+.gradient-text {
+  background-image: linear-gradient(135deg, #8B5CF6 0%, #6366F1 50%, #818CF8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-@keyframes wave {
-  0%,
-  100% {
-    transform: rotate(0deg);
-  }
-  10%,
-  30% {
-    transform: rotate(14deg);
-  }
-  20% {
-    transform: rotate(-8deg);
-  }
-  40% {
-    transform: rotate(-4deg);
-  }
-  50% {
-    transform: rotate(10deg);
-  }
+/* Glassmorphism - Header */
+.glass {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.5);
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-.animate-slide {
-  animation: scroll 15s linear infinite;
+.dark .glass {
+  background: rgba(15, 23, 42, 0.85);
+  border-bottom-color: rgba(51, 65, 85, 0.5);
 }
 
-#editor::-webkit-scrollbar {
-  width: 0px; /* Width of the vertical scrollbar */
+/* Glassmorphism - Cards */
+.glass-card {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(226, 232, 240, 0.5);
+  border-radius: 1rem;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-#editor::-webkit-scrollbar-track {
-  background: #2d2d2d; /* Color of the track (background) */
-  border-radius: 0px;
+.dark .glass-card {
+  background: rgba(30, 41, 59, 0.5);
+  border-color: rgba(51, 65, 85, 0.5);
 }
 
-#editor::-webkit-scrollbar-thumb {
-  background: #555; /* Color of the draggable handle */
-  border-radius: 10px;
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
 }
 
-#editor::-webkit-scrollbar-thumb:hover {
-  background: #888; /* Color when hovering */
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-reverse 8s ease-in-out 2s infinite;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #64748b;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Selection */
+::selection {
+  background: rgba(139, 92, 246, 0.3);
+  color: inherit;
 }

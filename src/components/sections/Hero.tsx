@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FiGithub, FiLinkedin, FiInstagram, FiArrowRight, FiArrowUpRight, FiMapPin, FiCalendar, FiExternalLink, FiStar, FiGitBranch } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiInstagram, FiArrowRight, FiArrowUpRight, FiMapPin, FiCalendar, FiExternalLink, FiStar, FiGitBranch, FiArrowDown } from "react-icons/fi";
 import { useGitHubData } from "../../hooks/github";
 
 
@@ -21,12 +21,25 @@ function getIntensityClass(count: number): string {
 export default function GitHubProfile() {
   const { profile, repos, totalCommits, contributionGrid, isLoading, error } = useGitHubData('shahid0980');
 
+  console.log("Contribution Grid:", contributionGrid);
+  console.log("Total Commits:", totalCommits);
+  console.log("Repos:", repos);
+
   const joinYear = profile?.created_at
     ? new Date(profile.created_at).getFullYear()
     : null;
 
   const totalStars = repos.reduce((sum, repo) => sum + repo.stargazers_count, 0);
   const totalForks = repos.reduce((sum, repo) => sum + repo.forks_count, 0);
+
+
+  function handleDownloadResume() {
+    const link = document.createElement("a");
+    link.href = "my_resume.pdf";
+    link.download = "sahid-khan-resume.pdf";
+    link.click();
+  }
+
 
   return (
     <section id="home" className="min-h-screen pt-16 flex flex-col dark-bg">
@@ -51,7 +64,7 @@ export default function GitHubProfile() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold dark-text-primary leading-[1.1] mb-8 max-w-3xl"
           >
-            Engineering digital experiences with precision.
+            Hey There, I&apos;m Shahid Khan
           </motion.h1>
 
           {/* Description */}
@@ -77,10 +90,10 @@ export default function GitHubProfile() {
               SERVICES_&_CAPABILITIES
               <FiArrowRight size={14} />
             </a>
-            <a href="#work" className="btn-outline inline-flex items-center gap-2">
-              EXPLORE_WORK()
-              <FiArrowUpRight size={14} />
-            </a>
+            <button onClick={handleDownloadResume} className="btn-outline inline-flex items-center gap-2">
+              DOwnload Resume
+              <FiArrowDown size={14} />
+            </button>
           </motion.div>
 
           {/* Social Links */}

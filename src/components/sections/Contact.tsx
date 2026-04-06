@@ -1,33 +1,17 @@
 import { useState, type FormEvent, type ChangeEvent } from "react";
 import { motion } from "framer-motion";
-import { FiMail, FiMapPin, FiPhone, FiSend, FiGithub, FiLinkedin, FiInstagram } from "react-icons/fi";
+import { FiSend, FiGithub, FiLinkedin, FiInstagram, FiArrowUpRight } from "react-icons/fi";
 
 interface FormData {
   name: string;
   email: string;
-  subject: string;
   message: string;
 }
 
 const contactInfo = [
-  {
-    icon: FiMail,
-    label: "Email",
-    value: "khans0980@gmail.com",
-    href: "mailto:khans0980@gmail.com",
-  },
-  {
-    icon: FiMapPin,
-    label: "Location",
-    value: "Odisha, India",
-    description: "Available for remote work worldwide",
-  },
-  {
-    icon: FiPhone,
-    label: "Phone",
-    value: "+91 9337633755",
-    href: "tel:+919337633755",
-  },
+  { label: "EMAIL", value: "khans0980@gmail.com", href: "mailto:khans0980@gmail.com" },
+  { label: "LOCATION", value: "Odisha, India" },
+  { label: "PHONE", value: "+91 9337633755", href: "tel:+919337633755" },
 ];
 
 const socialLinks = [
@@ -40,7 +24,6 @@ export default function Contact() {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
-    subject: "",
     message: "",
   });
 
@@ -48,7 +31,7 @@ export default function Contact() {
     e.preventDefault();
     console.log("Form submitted:", formData);
     alert("Thanks for reaching out! I'll get back to you soon.");
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    setFormData({ name: "", email: "", message: "" });
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -56,103 +39,75 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 px-6 relative overflow-hidden">
-      {/* Background effects */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-primary/10 rounded-full blur-[150px]" />
-      </div>
-
-      <div className="max-w-7xl mx-auto relative">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16"
-        >
-          <span className="text-accent text-sm font-medium tracking-wider uppercase">Get In Touch</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mt-3 mb-4">
-            Let's Work <span className="gradient-text">Together</span>
-          </h2>
-          <p className="text-slate-400 max-w-lg mx-auto text-lg">
-            Have a project in mind? I'd love to hear about it. Send me a message and let's create something amazing.
-          </p>
-        </motion.div>
-
-        <div className="grid lg:grid-cols-5 gap-8">
-          {/* Contact Info */}
+    <section id="contact" className="py-24 px-6 lg:px-12 border-t dark-border dark-bg">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-16">
+          {/* Left Column */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="lg:col-span-2 space-y-4"
           >
-            {contactInfo.map(({ icon: Icon, label, value, href, description }) => (
-              <div
-                key={label}
-                className="glass-card p-6 border border-primary/10 hover:border-primary/30 transition-colors"
-              >
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-gradient-to-br from-primary/20 to-accent/10 text-primary-light">
-                    <Icon size={22} />
-                  </div>
-                  <div>
-                    <p className="text-sm text-slate-500 mb-1">{label}</p>
-                    {href ? (
-                      <a
-                        href={href}
-                        className="text-lg font-semibold text-white hover:text-primary-light transition-colors"
-                      >
-                        {value}
-                      </a>
-                    ) : (
-                      <p className="text-lg font-semibold text-white">{value}</p>
-                    )}
-                    {description && (
-                      <p className="text-sm text-slate-500 mt-1">{description}</p>
-                    )}
-                  </div>
+            <p className="text-label dark-text-muted mb-4">— IO_005_CONTACT</p>
+            <h2 className="text-3xl md:text-4xl font-bold dark-text-primary mb-6 leading-tight">
+              Let's work together.
+            </h2>
+            <p className="dark-text-secondary mb-12 leading-relaxed">
+              Have a project in mind? I'd love to hear about it. Send me a message 
+              and let's create something great.
+            </p>
+
+            {/* Contact Info */}
+            <div className="space-y-6">
+              {contactInfo.map(({ label, value, href }) => (
+                <div key={label} className="flex items-center justify-between py-4 border-b dark-border">
+                  <span className="text-label dark-text-muted">{label}</span>
+                  {href ? (
+                    <a href={href} className="text-sm font-medium dark-text-primary dark:hover:text-gray-400 transition-colors flex items-center gap-2">
+                      {value}
+                      <FiArrowUpRight size={12} />
+                    </a>
+                  ) : (
+                    <span className="text-sm font-medium dark-text-primary">{value}</span>
+                  )}
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
 
             {/* Social Links */}
-            <div className="glass-card p-6 border border-primary/10">
-              <p className="text-sm text-slate-500 mb-4">Follow me on</p>
-              <div className="flex gap-3">
+            <div className="mt-12">
+              <p className="text-label dark-text-muted mb-4">FOLLOW_ME</p>
+              <div className="flex gap-4">
                 {socialLinks.map(({ icon: Icon, href, label }) => (
                   <a
                     key={label}
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-xl bg-surface-card border border-primary/15 flex items-center justify-center text-slate-400 hover:text-primary-light hover:border-primary/40 hover:shadow-lg hover:shadow-primary/10 transition-all"
+                    className="w-10 h-10 rounded-full border dark-border flex items-center justify-center dark-text-muted hover:dark-text-primary hover:border-current transition-all"
                     aria-label={label}
                   >
-                    <Icon size={20} />
+                    <Icon size={16} />
                   </a>
                 ))}
               </div>
             </div>
           </motion.div>
 
-          {/* Contact Form */}
+          {/* Right Column - Form */}
           <motion.form
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
             onSubmit={handleSubmit}
-            className="lg:col-span-3 glass-card p-8 border border-primary/10"
+            className="lg:border-l lg:dark-border lg:pl-16"
           >
-            <div className="grid md:grid-cols-2 gap-5 mb-5">
+            <div className="space-y-6">
               <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium text-slate-400 mb-2"
-                >
-                  Your Name
+                <label htmlFor="name" className="block text-label dark-text-muted mb-3">
+                  YOUR_NAME
                 </label>
                 <input
                   type="text"
@@ -161,17 +116,14 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-5 py-4 rounded-xl bg-surface-card border border-primary/15 text-white placeholder-slate-500 focus:outline-none focus:border-primary/50 focus:shadow-lg focus:shadow-primary/10 transition-all"
+                  className="w-full py-4 border-b dark-border focus:border-black dark:focus:border-white bg-transparent dark-text-primary placeholder-gray-300 dark:placeholder-gray-600 transition-colors"
                   placeholder="John Doe"
                 />
               </div>
 
               <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-slate-400 mb-2"
-                >
-                  Email Address
+                <label htmlFor="email" className="block text-label dark-text-muted mb-3">
+                  YOUR_EMAIL
                 </label>
                 <input
                   type="email"
@@ -180,57 +132,35 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-5 py-4 rounded-xl bg-surface-card border border-primary/15 text-white placeholder-slate-500 focus:outline-none focus:border-primary/50 focus:shadow-lg focus:shadow-primary/10 transition-all"
+                  className="w-full py-4 border-b dark-border focus:border-black dark:focus:border-white bg-transparent dark-text-primary placeholder-gray-300 dark:placeholder-gray-600 transition-colors"
                   placeholder="john@example.com"
                 />
               </div>
-            </div>
 
-            <div className="mb-5">
-              <label
-                htmlFor="subject"
-                className="block text-sm font-medium text-slate-400 mb-2"
+              <div>
+                <label htmlFor="message" className="block text-label dark-text-muted mb-3">
+                  YOUR_MESSAGE
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows={4}
+                  className="w-full py-4 border-b dark-border focus:border-black dark:focus:border-white bg-transparent dark-text-primary placeholder-gray-300 dark:placeholder-gray-600 transition-colors resize-none"
+                  placeholder="Tell me about your project..."
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="btn-primary inline-flex items-center gap-2 mt-4"
               >
-                Subject
-              </label>
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                value={formData.subject}
-                onChange={handleChange}
-                required
-                className="w-full px-5 py-4 rounded-xl bg-surface-card border border-primary/15 text-white placeholder-slate-500 focus:outline-none focus:border-primary/50 focus:shadow-lg focus:shadow-primary/10 transition-all"
-                placeholder="Project Inquiry"
-              />
+                SEND_MESSAGE
+                <FiSend size={14} />
+              </button>
             </div>
-
-            <div className="mb-6">
-              <label
-                htmlFor="message"
-                className="block text-sm font-medium text-slate-400 mb-2"
-              >
-                Your Message
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                required
-                rows={5}
-                className="w-full px-5 py-4 rounded-xl bg-surface-card border border-primary/15 text-white placeholder-slate-500 focus:outline-none focus:border-primary/50 focus:shadow-lg focus:shadow-primary/10 transition-all resize-none"
-                placeholder="Tell me about your project, timeline, and budget..."
-              />
-            </div>
-
-            <button
-              type="submit"
-              className="group w-full inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl btn-gradient text-white font-medium text-lg"
-            >
-              <FiSend size={20} className="group-hover:translate-x-1 group-hover:-translate-y-0.5 transition-transform" />
-              <span>Send Message</span>
-            </button>
           </motion.form>
         </div>
       </div>

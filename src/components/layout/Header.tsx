@@ -1,97 +1,89 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FiMenu, FiX, FiDownload } from "react-icons/fi";
-// import { Filight, FiDark } from "react-icons/fi";
+import { FiMenu, FiX, FiSun, FiMoon } from "react-icons/fi";
+import { useTheme } from "../theme/ThemeProvider";
 
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
-  { label: "Skills", href: "#skills" },
+  { label: "Skills", href: "#work" },
   { label: "Contact", href: "#contact" },
 ];
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
 
-  const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = "shahidkhan_CV.pdf";
-    link.download = "shahid-resume.pdf";
-    link.click();
+  const toggleTheme = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 glass">
-      <nav className="max-w-7xl mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          <a href="#home" className="text-2xl font-bold tracking-tight">
-            <span className="text-white">Shahid</span>
-            <span className="gradient-text">.</span>
+    <header className="fixed top-0 left-0 right-0 z-50 dark-surface-alt">
+      <nav className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo */}
+          <a href="#home" className="flex items-center gap-2">
+            <span className="text-sm font-semibold dark-text-primary">SK.</span>
+            <span className="text-xs dark-text-muted tracking-wider">/ FULL_STACK</span>
           </a>
 
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-slate-400 hover:text-white transition-colors relative group"
+                className="nav-link text-xs font-medium dark-text-muted hover:text-black dark:hover:text-white transition-colors tracking-wider"
               >
-                {link.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent group-hover:w-full transition-all duration-300" />
+                {link.label.toUpperCase()}
               </a>
             ))}
           </div>
 
+          {/* Right Side: Theme Toggle */}
           <div className="flex items-center gap-3">
             <button
-              onClick={handleDownload}
-              className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl btn-gradient text-white text-sm font-medium"
+              onClick={toggleTheme}
+              className="theme-toggle"
+              aria-label="Toggle theme"
             >
-              <FiDownload size={16} />
-              <span>Resume</span>
+              {theme === "dark" ? <FiSun size={16} /> : <FiMoon size={16} />}
             </button>
 
+            {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 rounded-xl text-slate-400 hover:text-white hover:bg-white/5 transition-colors"
+              className="md:hidden theme-toggle"
               aria-label="Toggle menu"
             >
-              {isOpen ? <FiX size={22} /> : <FiMenu size={22} />}
+              {isOpen ? <FiX size={16} /> : <FiMenu size={16} />}
             </button>
           </div>
         </div>
       </nav>
 
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden overflow-hidden"
+            className="md:hidden overflow-hidden border-t dark-border dark-surface-alt"
           >
-            <div className="px-6 py-4 space-y-1 border-t border-primary/10 bg-surface/95 backdrop-blur-xl">
+            <div className="px-6 py-4 space-y-4">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="block py-3 text-sm font-medium text-slate-400 hover:text-white transition-colors"
+                  className="block text-xs font-medium dark-text-muted hover:text-black dark:hover:text-white transition-colors tracking-wider"
                 >
-                  {link.label}
+                  {link.label.toUpperCase()}
                 </a>
               ))}
-              <button
-                onClick={() => {
-                  handleDownload();
-                  setIsOpen(false);
-                }}
-                className="flex items-center gap-2 py-3 text-sm font-medium text-primary"
-              >
-                <FiDownload size={16} />
-                Download Resume
-              </button>
             </div>
           </motion.div>
         )}

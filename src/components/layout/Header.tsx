@@ -2,14 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiMenu, FiX, FiSun, FiMoon } from "react-icons/fi";
 import { useTheme } from "../theme/ThemeProvider";
-
-const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Skills", href: "#work" },
-  { label: "Contact", href: "#contact" },
-];
+import navLinks from "../../data/navMenu";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,6 +47,7 @@ export default function Header() {
 
             {/* Mobile Menu Button */}
             <button
+              type="button"
               onClick={() => setIsOpen(!isOpen)}
               className="md:hidden theme-toggle"
               aria-label="Toggle menu"

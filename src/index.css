@@ -340,3 +340,154 @@ a {
   --dot-active: #FFFFFF;
   --dot-inactive: #1A1A1C;
 }
+
+/* ===== GitHub Profile Section ===== */
+
+/* Avatar ring */
+.gh-avatar-ring {
+  padding: 2px;
+  border-radius: 50%;
+  border: 2px solid #E5E5E5;
+  transition: border-color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.gh-avatar-ring:hover {
+  border-color: #000;
+}
+
+.dark .gh-avatar-ring {
+  border-color: #333;
+}
+
+.dark .gh-avatar-ring:hover {
+  border-color: #FFFFFF;
+}
+
+/* Stat cards */
+.gh-stat-card {
+  display: flex;
+  flex-direction: column;
+  padding: 14px 16px;
+  border: 1px solid #E5E5E5;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.gh-stat-card:hover {
+  border-color: #000;
+  transform: translateY(-1px);
+}
+
+.dark .gh-stat-card {
+  border-color: #222;
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.dark .gh-stat-card:hover {
+  border-color: #555;
+}
+
+/* Contribution grid */
+.gh-contribution-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.gh-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  transition: all 0.15s ease;
+}
+
+.gh-dot:hover {
+  transform: scale(1.4);
+  outline: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.dark .gh-dot:hover {
+  outline-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Light mode contribution intensities */
+.gh-dot-0 { background-color: #F0F0F0; }
+.gh-dot-1 { background-color: #D0D0D0; }
+.gh-dot-2 { background-color: #A0A0A0; }
+.gh-dot-3 { background-color: #606060; }
+.gh-dot-4 { background-color: #000000; }
+
+/* Dark mode contribution intensities */
+.dark .gh-dot-0 { background-color: #161618; }
+.dark .gh-dot-1 { background-color: #333; }
+.dark .gh-dot-2 { background-color: #666; }
+.dark .gh-dot-3 { background-color: #AAA; }
+.dark .gh-dot-4 { background-color: #FFFFFF; }
+
+/* Repo item */
+.gh-repo-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid #E5E5E5;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.gh-repo-item:hover {
+  border-color: #000;
+  transform: translateX(4px);
+}
+
+.dark .gh-repo-item {
+  border-color: #222;
+}
+
+.dark .gh-repo-item:hover {
+  border-color: #555;
+}
+
+/* Language dots */
+.gh-lang-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  background-color: #666;
+}
+
+.gh-lang-dot[data-lang="javascript"] { background-color: #f1e05a; }
+.gh-lang-dot[data-lang="typescript"] { background-color: #3178c6; }
+.gh-lang-dot[data-lang="python"] { background-color: #3572A5; }
+.gh-lang-dot[data-lang="html"] { background-color: #e34c26; }
+.gh-lang-dot[data-lang="css"] { background-color: #563d7c; }
+.gh-lang-dot[data-lang="java"] { background-color: #b07219; }
+.gh-lang-dot[data-lang="c++"] { background-color: #f34b7d; }
+.gh-lang-dot[data-lang="c#"] { background-color: #178600; }
+.gh-lang-dot[data-lang="go"] { background-color: #00ADD8; }
+.gh-lang-dot[data-lang="rust"] { background-color: #dea584; }
+.gh-lang-dot[data-lang="ruby"] { background-color: #701516; }
+.gh-lang-dot[data-lang="php"] { background-color: #4F5D95; }
+.gh-lang-dot[data-lang="swift"] { background-color: #F05138; }
+.gh-lang-dot[data-lang="dart"] { background-color: #00B4AB; }
+
+/* Loading spinner */
+.gh-loader {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #E5E5E5;
+  border-top-color: #000;
+  border-radius: 50%;
+  animation: ghSpin 0.8s linear infinite;
+}
+
+.dark .gh-loader {
+  border-color: #333;
+  border-top-color: #FFFFFF;
+}
+
+@keyframes ghSpin {
+  to { transform: rotate(360deg); }
+}

@@ -98,14 +98,14 @@ const BlogSection = () => {
                     transition={{ duration: 0.5 }}
                     className="mt-16 pt-16 border-t dark-border text-center"
                 >
-                    <p className="text-label dark-text-muted mb-4">START_A_PROJECT()</p>
+                    <p className="text-label dark-text-muted mb-4">LOOK_UPDATES()</p>
                     <p className="dark-text-secondary mb-8 max-w-lg mx-auto">
-                        Have a project in mind? Let's discuss how I can help bring your ideas to life.
+                        Stay updated with our latest blog posts and industry insights.
                     </p>
-                    <a href="#contact" className="btn-primary inline-flex items-center gap-2">
-                        GET_IN_TOUCH
+                    <Link to={"/blog"} className="btn-primary inline-flex items-center gap-2">
+                        READ_OUR_BLOG
                         <FiArrowRight size={14} />
-                    </a>
+                    </Link>
                 </motion.div>
             </div>
         </section>

@@ -1,13 +1,12 @@
 import { motion } from "framer-motion";
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 
 
-// interface RouteParams {
-//     path: string;
-// }
+
 
 
 export function NotFound() {
+    let { pathname } = useLocation() as { pathname: string };
     return (
         <section id="not-found" className="min-h-screen py-24 px-6 lg:px-12 dark-bg flex items-center justify-center border-t dark-border">
             <div className="max-w-7xl mx-auto w-full">
@@ -56,7 +55,7 @@ export function NotFound() {
                         <div className="space-y-4">
                             {[
                                 "Fetching route metadata...",
-                                `Error: ${"undefined"} /unknown not resolved.`,
+                                `Error: ${pathname} /unknown not resolved.`,
                                 "Searching fallback directories...",
                                 "Status: 404 Visualized.",
                             ].map((text, index) => (

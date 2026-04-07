@@ -1,92 +1,145 @@
+import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { FiArrowRight, FiSearch } from "react-icons/fi";
 
-const stats = [
-    { value: "10+", label: "PROJECTS_DELIVERED" },
-    { value: "1+", label: "YEARS_EXPERIENCE" },
-    { value: "100%", label: "CLIENT_SATISFACTION" },
+const allPosts = [
+    {
+        id: "01",
+        title: "Mastering React Native Animations",
+        description: "A deep dive into creating fluid 60fps animations in mobile apps using Reanimated.",
+        date: "March 15, 2026",
+        tags: ["React Native", "UI/UX"],
+        category: "Development",
+    },
+    {
+        id: "02",
+        title: "Why I Switched to PostgreSQL",
+        description: "Comparing NoSQL vs SQL for full-stack applications in 2026.",
+        date: "Feb 28, 2026",
+        tags: ["Database", "Backend"],
+        category: "Engineering",
+    },
+    {
+        id: "03",
+        title: "The Future of AI in Web Dev",
+        description: "How LLMs and AI tools are changing the way we write and ship code.",
+        date: "Jan 12, 2026",
+        tags: ["AI", "Web Dev"],
+        category: "AI",
+    },
+    {
+        id: "04",
+        title: "Cloud Infrastructure for Startups",
+        description: "Scaling from zero to 10k users using Docker and AWS without breaking the bank.",
+        date: "Jan 05, 2026",
+        tags: ["DevOps", "Cloud"],
+        category: "Engineering",
+    },
 ];
 
-const techStack = [
-    "React", "Next.js", "Node.js", "TypeScript", "MongoDB", "PostgreSQL", "Docker", "AWS"
-];
+const BlogPage = () => {
+    const [filter, setFilter] = useState("ALL");
 
+    const categories = ["ALL", "Development", "Engineering", "AI"];
 
+    const filteredPosts = filter === "ALL"
+        ? allPosts
+        : allPosts.filter(post => post.category === filter);
 
-export function Blog() {
     return (
-        <section id="about" className="py-24 px-6 lg:px-12 border-t dark-border dark-bg">
+        <section id="blogs" className="min-h-screen dark-bg pt-32 pb-24 px-6 lg:px-12">
             <div className="max-w-7xl mx-auto">
-                <div className="grid lg:grid-cols-2 gap-16">
-                    {/* Left Column */}
+
+                {/* Header Section */}
+                <header className="mb-20 border-b dark-border pb-12">
                     <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <p className="text-label dark-text-muted mb-4">— IO_002_ABOUT</p>
-                        <h2 className="text-3xl md:text-4xl font-bold dark-text-primary mb-6 leading-tight">
-                            Building digital products with precision and clarity.
-                        </h2>
-                        <div className="space-y-4 dark-text-secondary leading-relaxed">
-                            <p>
-                                I'm a Full Stack Developer with a strong foundation in building
-                                scalable, efficient, and user-friendly web applications. I work
-                                across both frontend and backend, turning ideas into reliable
-                                digital products.
-                            </p>
-                            <p>
-                                My core skill set includes React.js, Node.js, MongoDB, PostgreSQL,
-                                Docker, AWS, and Python. I enjoy designing clean user interfaces,
-                                developing secure backend APIs, and deploying applications using
-                                modern cloud technologies.
-                            </p>
-                        </div>
+                        <p className="text-label dark-text-muted mb-4">— INDEX_REPOSITORY</p>
+                        <h1 className="text-5xl md:text-7xl font-bold dark-text-primary mb-8 tracking-tighter">
+                            TECHNICAL <br />
+                            <span className="text-blue-500">WRITINGS.</span>
+                        </h1>
+                        <p className="dark-text-secondary max-w-xl text-lg leading-relaxed">
+                            In-depth articles about full-stack development, mobile architecture,
+                            and the evolving landscape of AI engineering.
+                        </p>
+                    </motion.div>
+                </header>
 
-                        {/* Stats */}
-                        <div className="grid grid-cols-3 gap-8 mt-12 pt-12 border-t dark-border">
-                            {stats.map((stat) => (
-                                <div key={stat.label}>
-                                    <p className="text-3xl font-bold dark-text-primary">{stat.value}</p>
-                                    <p className="text-label dark-text-muted mt-2">{stat.label}</p>
+                {/* Filter Bar */}
+                <div className="flex flex-wrap items-center justify-between gap-6 mb-12">
+                    <div className="flex gap-4">
+                        {categories.map((cat) => (
+                            <button
+                                key={cat}
+                                onClick={() => setFilter(cat)}
+                                className={`text-label px-4 py-2 border transition-all ${filter === cat
+                                    ? "bg-blue-500 border-blue-500 text-white"
+                                    : "dark-border dark-text-muted hover:dark-text-primary hover:border-current"
+                                    }`}
+                            >
+                                {cat.toUpperCase()}
+                            </button>
+                        ))}
+                    </div>
+                    <div className="hidden md:flex items-center gap-2 dark-text-muted text-label">
+                        <FiSearch />
+                        <span>SEARCH_ARCHIVE</span>
+                    </div>
+                </div>
+
+                {/* Blog Grid - Matching your homepage layout */}
+                <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-px bg-gray-100 dark:bg-[#222] border dark-border">
+                    {filteredPosts.map((post, index) => (
+                        <motion.div
+                            key={post.id}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.5, delay: index * 0.05 }}
+                            className="dark-bg p-10 hover:bg-gray-50 dark:hover:bg-[#111113] transition-colors group cursor-pointer relative overflow-hidden"
+                        >
+                            <div className="flex items-start justify-between mb-8">
+                                <div>
+                                    <span className="text-label dark-text-muted opacity-50 block mb-1">{post.id}</span>
+                                    <span className="text-[10px] font-mono text-blue-500">{post.date}</span>
                                 </div>
-                            ))}
-                        </div>
-                    </motion.div>
+                                <FiArrowRight className="dark-text-muted opacity-50 group-hover:dark-text-primary group-hover:translate-x-2 transition-all" size={20} />
+                            </div>
 
-                    {/* Right Column */}
-                    <motion.div
-                        initial={{ opacity: 0, x: 20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: 0.1 }}
-                        className="lg:border-l lg:dark-border lg:pl-16"
-                    >
-                        <p className="text-label dark-text-muted mb-6">TECH_STACK()</p>
+                            <h3 className="text-2xl font-bold dark-text-primary mb-4 group-hover:text-blue-500 transition-colors">
+                                {post.title}
+                            </h3>
 
-                        <div className="grid grid-cols-2 gap-4">
-                            {techStack.map((tech, index) => (
-                                <motion.div
-                                    key={tech}
-                                    initial={{ opacity: 0, y: 10 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.3, delay: index * 0.05 }}
-                                    className="p-4 border dark-border hover:border-current dark-text-primary transition-colors"
-                                >
-                                    <p className="text-sm font-medium">{tech}</p>
-                                </motion.div>
-                            ))}
-                        </div>
+                            <p className="text-dark-text-secondary leading-relaxed mb-8 line-clamp-2">
+                                {post.description}
+                            </p>
 
-                        <div className="mt-12 p-6 border dark-border">
-                            <p className="text-label dark-text-muted mb-2">CURRENT_STATUS</p>
-                            <p className="text-sm dark-text-primary font-medium">Available for freelance projects</p>
-                            <p className="text-sm dark-text-secondary mt-1">Remote • Worldwide</p>
-                        </div>
-                    </motion.div>
+                            <div className="flex flex-wrap gap-2">
+                                {post.tags.map((tag) => (
+                                    <span
+                                        key={tag}
+                                        className="text-[10px] font-bold tracking-widest dark-text-muted px-2 py-1 border dark-border group-hover:border-blue-500/30 transition-colors"
+                                    >
+                                        {tag.toUpperCase()}
+                                    </span>
+                                ))}
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
+
+                {/* Footer Link - Back to Home */}
+                <div className="mt-20 text-center">
+                    <a href="/" className="text-label dark-text-muted hover:dark-text-primary flex items-center justify-center gap-2 transition-colors">
+                        <span>←</span> RETURN_TO_BASE
+                    </a>
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
+
+export default BlogPage;

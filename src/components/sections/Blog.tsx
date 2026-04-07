@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { FiArrowRight } from "react-icons/fi";
+import { Link } from "react-router";
 
 const blogPosts = [
     {
@@ -66,10 +67,11 @@ const BlogSection = () => {
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             className="dark-bg p-8 hover:bg-gray-50 dark:hover:bg-[#111113] transition-colors group"
                         >
-                            <div className="flex items-start justify-between mb-6">
+                            <Link to={"/blog"} className="flex items-start justify-between mb-6">
                                 <span className="text-label dark-text-muted opacity-50">{post.id}</span>
+
                                 <FiArrowRight className="dark-text-muted opacity-50 group-hover:dark-text-primary group-hover:opacity-100 transition-all" size={16} />
-                            </div>
+                            </Link>
                             <h3 className="text-lg font-bold dark-text-primary mb-3">{post.title}</h3>
                             <p className="text-sm dark-text-secondary leading-relaxed mb-6">
                                 {post.description}

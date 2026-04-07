@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiMenu, FiX, FiSun, FiMoon } from "react-icons/fi";
 import { useTheme } from "../theme/ThemeProvider";
+import { HashLink } from 'react-router-hash-link';
 import navLinks from "../../data/navMenu";
 
 export default function Header() {
@@ -25,13 +26,13 @@ export default function Header() {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <HashLink
                 key={link.href}
-                href={link.href}
+                to={link.href}
                 className="nav-link text-xs font-medium dark-text-muted hover:text-black dark:hover:text-white transition-colors tracking-wider"
               >
                 {link.label.toUpperCase()}
-              </a>
+              </HashLink>
             ))}
           </div>
 

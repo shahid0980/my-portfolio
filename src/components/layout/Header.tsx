@@ -50,7 +50,7 @@ export default function Header() {
             <button
               type="button"
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden theme-toggle"
+              className="md-hidden theme-toggle"
               aria-label="Toggle menu"
             >
               {isOpen ? <FiX size={16} /> : <FiMenu size={16} />}

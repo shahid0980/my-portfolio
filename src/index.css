@@ -343,6 +343,12 @@ a {
   color: #ffffff;
 }
 
+@media (width >= 768px) {
+  .md-hidden {
+    display: none;
+  }
+}
+
 /* Dot matrix chart colors */
 :root {
   --dot-active: #000000;

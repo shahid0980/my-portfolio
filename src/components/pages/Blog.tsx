@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FiArrowRight, FiSearch } from "react-icons/fi";
+import { Link } from "react-router";
 
 const allPosts = [
     {
@@ -133,9 +134,9 @@ const BlogPage = () => {
 
                 {/* Footer Link - Back to Home */}
                 <div className="mt-20 text-center">
-                    <a href="/" className="text-label dark-text-muted hover:dark-text-primary flex items-center justify-center gap-2 transition-colors">
+                    <Link to="/" className="text-label dark-text-muted hover:dark-text-primary flex items-center justify-center gap-2 transition-colors">
                         <span>←</span> RETURN_TO_BASE
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>

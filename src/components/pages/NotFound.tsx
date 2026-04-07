@@ -1,4 +1,11 @@
 import { motion } from "framer-motion";
+import { Link, useParams } from "react-router-dom";
+
+
+// interface RouteParams {
+//     path: string;
+// }
+
 
 export function NotFound() {
     return (
@@ -25,13 +32,15 @@ export function NotFound() {
                         </div>
 
                         <div className="mt-12 pt-12 border-t dark-border">
-                            <motion.a
-                                href="/"
+                            <motion.div
+                                // href="/"
                                 whileHover={{ x: 5 }}
                                 className="inline-flex items-center gap-3 text-sm font-bold dark-text-primary tracking-widest uppercase hover:text-blue-500 transition-colors"
                             >
-                                RETURN_TO_HOME() <span className="text-xl">→</span>
-                            </motion.a>
+                                <Link to="/">
+                                    RETURN_TO_HOME() <span className="text-xl">→</span>
+                                </Link>
+                            </motion.div>
                         </div>
                     </motion.div>
 
@@ -47,7 +56,7 @@ export function NotFound() {
                         <div className="space-y-4">
                             {[
                                 "Fetching route metadata...",
-                                "Error: Path /unknown not resolved.",
+                                `Error: ${"undefined"} /unknown not resolved.`,
                                 "Searching fallback directories...",
                                 "Status: 404 Visualized.",
                             ].map((text, index) => (

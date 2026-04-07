@@ -42,7 +42,7 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <p className="text-label dark-text-muted mb-4">— IO_005_CONTACT</p>
+            <p className="text-label dark-text-muted mb-4">— IO_006_CONTACT</p>
             <h2 className="text-3xl md:text-4xl font-bold dark-text-primary mb-6 leading-tight">
               Let's work together.
             </h2>

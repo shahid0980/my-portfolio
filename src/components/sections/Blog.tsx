@@ -26,14 +26,7 @@ const blogPosts = [
         tags: ["AI", "Web Dev"],
         link: "#"
     },
-    {
-        id: 3,
-        title: "The Future of AI in Web Dev",
-        description: "How LLMs and AI tools are changing the way we write and ship code.",
-        date: "Jan 12, 2026",
-        tags: ["AI", "Web Dev"],
-        link: "#"
-    },
+
     {
         id: 4,
         title: "The Future of AI in Web Dev",

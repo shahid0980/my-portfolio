@@ -18,7 +18,7 @@ function getIntensityClass(count: number): string {
   return "gh-dot-4";
 }
 
-export default function GitHubProfile() {
+export default function Hero() {
   const { profile, repos, totalCommits, contributionGrid, isLoading, error } = useGitHubData('shahid0980');
 
   console.log("Contribution Grid:", contributionGrid);

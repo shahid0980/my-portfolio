@@ -39,7 +39,7 @@ const blogPosts = [
 
 const BlogSection = () => {
     return (
-        <section id="blog" className="py-24 px-6 lg:px-12 border-t dark-border dark-bg">
+        <section id="blogs" className="py-24 px-6 lg:px-12 border-t dark-border dark-bg">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <motion.div

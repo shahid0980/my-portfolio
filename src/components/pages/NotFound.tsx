@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 
 

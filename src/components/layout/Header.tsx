@@ -4,6 +4,7 @@ import { FiMenu, FiX, FiSun, FiMoon } from "react-icons/fi";
 import { useTheme } from "../theme/ThemeProvider";
 import { HashLink } from 'react-router-hash-link';
 import navLinks from "../../data/navMenu";
+import { Link } from "react-router";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,10 +19,10 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <a href="#home" className="flex items-center gap-2">
+          <Link to={"/"} className="flex items-center gap-2">
             <span className="text-sm font-semibold dark-text-primary">SK.</span>
             <span className="text-xs dark-text-muted tracking-wider">/ FULL_STACK</span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">

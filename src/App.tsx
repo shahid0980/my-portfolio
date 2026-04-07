@@ -5,6 +5,7 @@ import Freelancer from "./components/sections/Freelancer";
 import Skills from "./components/sections/Skills";
 import Contact from "./components/sections/Contact";
 import Footer from "./components/layout/Footer";
+import BlogSection from "./components/sections/Blog";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <About />
         <Freelancer />
         <Skills />
+        <BlogSection />
         <Contact />
       </main>
       <Footer />

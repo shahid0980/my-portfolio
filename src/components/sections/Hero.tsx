@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FiGithub, FiLinkedin, FiInstagram, FiArrowRight, FiArrowUpRight, FiMapPin, FiCalendar, FiExternalLink, FiStar, FiGitBranch, FiArrowDown } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiInstagram, FiArrowRight, FiMapPin, FiCalendar, FiExternalLink, FiStar, FiGitBranch, FiArrowDown } from "react-icons/fi";
 import { useGitHubData } from "../../hooks/github";
 
 
@@ -24,6 +24,7 @@ export default function GitHubProfile() {
   console.log("Contribution Grid:", contributionGrid);
   console.log("Total Commits:", totalCommits);
   console.log("Repos:", repos);
+  console.log("Profile:", profile);
 
   const joinYear = profile?.created_at
     ? new Date(profile.created_at).getFullYear()

@@ -1,6 +1,9 @@
 import { useState, type FormEvent, type ChangeEvent } from "react";
 import { motion } from "framer-motion";
-import { FiSend, FiGithub, FiLinkedin, FiInstagram, FiArrowUpRight } from "react-icons/fi";
+import { FiSend, FiArrowUpRight } from "react-icons/fi";
+import { contactInfo, socialLinks } from "../../data/personalDetails";
+
+
 
 interface FormData {
   name: string;
@@ -8,17 +11,7 @@ interface FormData {
   message: string;
 }
 
-const contactInfo = [
-  { label: "EMAIL", value: "khans0980@gmail.com", href: "mailto:khans0980@gmail.com" },
-  { label: "LOCATION", value: "Odisha, India" },
-  { label: "PHONE", value: "+91 9337633755", href: "tel:+919337633755" },
-];
 
-const socialLinks = [
-  { icon: FiGithub, href: "https://github.com/shahid0980", label: "GitHub" },
-  { icon: FiLinkedin, href: "https://www.linkedin.com/in/shahid-khan-073157157/", label: "LinkedIn" },
-  { icon: FiInstagram, href: "https://www.instagram.com/shahid_khan__0980/", label: "Instagram" },
-];
 
 export default function Contact() {
   const [formData, setFormData] = useState<FormData>({
@@ -54,7 +47,7 @@ export default function Contact() {
               Let's work together.
             </h2>
             <p className="dark-text-secondary mb-12 leading-relaxed">
-              Have a project in mind? I'd love to hear about it. Send me a message 
+              Have a project in mind? I'd love to hear about it. Send me a message
               and let's create something great.
             </p>
 

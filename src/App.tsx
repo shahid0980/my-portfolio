@@ -12,7 +12,7 @@ export function App() {
 
             <Header />
             <main>
-                <ScrollProgress />
+                {/* <ScrollProgress /> */}
                 <Outlet />
             </main>
             <Footer />

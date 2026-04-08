@@ -18,15 +18,15 @@
   --font-family-mono: "SF Mono", "Fira Code", "Consolas", monospace;
 }
 
-/* html {
+html {
   scroll-behavior: smooth;
-} */
+}
 
 /* Hide scrollbar for IE, Edge and Firefox */
-html {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
+/* html {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+} */
 
 @layer base {
   body {

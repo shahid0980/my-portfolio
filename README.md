@@ -6,7 +6,7 @@ This is a clean, professionally formatted version of your portfolio’s `README.
 
 A high-fidelity, minimalist developer portfolio featuring a live GitHub integration, built with a modern technical stack and a focus on clean typography and motion.
 
-**🔗 [Live Demo](https://shahid0980.github.io/my-portfolio)**
+**🔗 [Live Demo](https://my-portfolio-psi-two-19.vercel.app/)**
 
 ---
 

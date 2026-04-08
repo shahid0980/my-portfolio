@@ -71,14 +71,14 @@ export default function Header() {
           >
             <div className="px-6 py-4 space-y-4">
               {navLinks.map((link) => (
-                <a
+                <HashLink
                   key={link.href}
-                  href={link.href}
+                  to={link.href}
                   onClick={() => setIsOpen(false)}
                   className="block text-xs font-medium dark-text-muted hover:text-black dark:hover:text-white transition-colors tracking-wider"
                 >
                   {link.label.toUpperCase()}
-                </a>
+                </HashLink>
               ))}
             </div>
           </motion.div>

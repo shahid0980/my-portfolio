@@ -31,7 +31,7 @@ const ScrollProgress = () => {
 
         <div className="fixed right-0 top-0 bottom-0 w-0.5 z-40">
             <motion.div
-                className="fixed right-0 top-0 bottom-0 w-0.5 bg-black dark:bg-white origin-top z-50"
+                className="fixed right-0 top-0 bottom-0 w-0.5 bg-black/30 dark:bg-white/30 origin-top z-50"
                 style={{ scaleY }}
             />
         </div>

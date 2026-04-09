@@ -43,7 +43,7 @@ export default function SystemArchitecture() {
 
                             {/* Tech Tags matching your About section style */}
                             <div className="grid grid-cols-2 gap-3 mt-8">
-                                {["NEXT.JS", "TAILWIND", "SEO_OPT", "Vercel"].map((tech) => (
+                                {["REACT.JS", "TAILWIND", "SEO_OPT", "Vercel"].map((tech) => (
                                     <div key={tech} className="p-3 border dark-border text-[10px] font-mono tracking-widest text-center">
                                         {tech}
                                     </div>

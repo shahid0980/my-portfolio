@@ -3,7 +3,7 @@ import { motion } from "motion/react"
 
 
 const parentAnimation = {
-    hover: {
+    open: {
         rotateX: 0
     },
     initial: {
@@ -12,7 +12,7 @@ const parentAnimation = {
 }
 
 const childAnimation = {
-    hover: {
+    open: {
         opacity: 1
     },
     initial: {
@@ -21,7 +21,7 @@ const childAnimation = {
 }
 
 const childAnimation2 = {
-    hover: {
+    open: {
         width: '20%'
     },
     initial: {
@@ -40,10 +40,10 @@ export default function AnimationCompo() {
                     transformOrigin: "bottom"
                 }}
                 variants={parentAnimation}
+                whileInView="open"
 
 
-
-                transition={{ duration: 0.10, ease: "easeInOut" }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
 
 
             >
@@ -54,7 +54,7 @@ export default function AnimationCompo() {
                 <motion.div className="w-full h-full rounded-t-[10px] bg-[url(https://res.cloudinary.com/dhcvk2b2u/image/upload/v1775745538/portfolio-website-images/portfolio-site-hero-screenshort_ao3s0m.png)] bg-cover z-0"
 
                     variants={childAnimation}
-                    transition={{ duration: 0.5, ease: "easeInOut" }}
+                    transition={{ duration: 0.6, ease: "easeInOut" }}
 
 
                 >
@@ -62,7 +62,7 @@ export default function AnimationCompo() {
                 </motion.div>
                 <motion.div
                     variants={childAnimation2}
-                    transition={{ duration: 0.6, ease: "easeInOut" }}
+                    transition={{ duration: 0.7, ease: "easeInOut" }}
                     className=" absolute inset-0 mt-1.5 mx-auto bg-black z-10 w-[20%] h-2 rounded-xl" />
 
 

@@ -3,15 +3,15 @@ import { FiExternalLink, FiGithub, FiLayers } from "react-icons/fi";
 import AnimationCompo from "../ui/AnimationCompo";
 
 
-const stats = [
-    { value: "10+", label: "PROJECTS_DELIVERED" },
-    { value: "1+", label: "YEARS_EXPERIENCE" },
-    { value: "100%", label: "CLIENT_SATISFACTION" },
-];
+// const stats = [
+//     { value: "10+", label: "PROJECTS_DELIVERED" },
+//     { value: "1+", label: "YEARS_EXPERIENCE" },
+//     { value: "100%", label: "CLIENT_SATISFACTION" },
+// ];
 
-const techStack = [
-    "React", "Next.js", "Node.js", "TypeScript", "MongoDB", "PostgreSQL", "Docker", "AWS"
-];
+// const techStack = [
+//     "React", "Next.js", "Node.js", "TypeScript", "MongoDB", "PostgreSQL", "Docker", "AWS"
+// ];
 
 export default function SystemArchitecture() {
     return (

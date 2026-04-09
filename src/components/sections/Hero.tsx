@@ -43,7 +43,7 @@ export default function Hero() {
 
 
   return (
-    <section id="home" className="min-h-screen pt-16 flex flex-col dark-bg">
+    <section id="home" className="min-h-screen pt-8 flex flex-col dark-bg">
       {/* Main Content */}
       <div className="flex-1 flex flex-col items-center justify-center lg:flex-row">
         {/* Left Column - Main Content */}
@@ -237,7 +237,7 @@ export default function Hero() {
               </motion.div>
 
               {/* Contribution Graph */}
-              <motion.div
+              {/* <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.85 }}
@@ -258,18 +258,22 @@ export default function Hero() {
                       ))}
                     </div>
                   ))}
-                </div>
-                {/* Legend */}
-                <div className="flex items-center justify-end gap-1 mt-2">
-                  <span className="text-label dark-text-muted mr-1" style={{ fontSize: '8px' }}>LESS</span>
-                  <div className="gh-dot gh-dot-0" />
-                  <div className="gh-dot gh-dot-1" />
-                  <div className="gh-dot gh-dot-2" />
-                  <div className="gh-dot gh-dot-3" />
-                  <div className="gh-dot gh-dot-4" />
-                  <span className="text-label dark-text-muted ml-1" style={{ fontSize: '8px' }}>MORE</span>
-                </div>
-              </motion.div>
+                </div> */}
+
+
+              {/* Legend */}
+
+
+              {/* <div className="flex items-center justify-end gap-1 mt-2">
+                <span className="text-label dark-text-muted mr-1" style={{ fontSize: '8px' }}>LESS</span>
+                <div className="gh-dot gh-dot-0" />
+                <div className="gh-dot gh-dot-1" />
+                <div className="gh-dot gh-dot-2" />
+                <div className="gh-dot gh-dot-3" />
+                <div className="gh-dot gh-dot-4" />
+                <span className="text-label dark-text-muted ml-1" style={{ fontSize: '8px' }}>MORE</span>
+              </div>
+            </motion.div> */}
 
               {/* Divider */}
               <div className="divider" />
@@ -330,14 +334,14 @@ export default function Hero() {
             </div>
           ) : null}
         </motion.div>
-      </div>
+      </div >
 
       {/* Footer Bar */}
-      <div className="border-t dark-border py-4 px-6 lg:px-12">
+      < div className="border-t dark-border py-4 px-6 lg:px-12" >
         <p className="text-center text-label dark-text-muted">
           REDUCE TO ESSENTIALS | VOL. 01 | FUNCTION DICTATES FORM
         </p>
-      </div>
-    </section>
+      </div >
+    </section >
   );
 }
